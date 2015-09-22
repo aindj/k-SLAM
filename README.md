@@ -12,8 +12,10 @@ Compilation
 k-SLAM requires a modern version of gcc that can compile C++11.
 ```
 tar xf SLAM.tgz
-cd SLAM
+cd SLAM/build
 make
+cd ..
+mv build/SLAM ./
 ```
 optionally add k-SLAM to path:
 ```
