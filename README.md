@@ -16,9 +16,6 @@ cd SLAM/build
 make
 cd ..
 mv build/SLAM ./
-```
-optionally add k-SLAM to path:
-```
 export PATH=\$PATH:.
 ```
 Database build
