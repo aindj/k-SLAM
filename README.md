@@ -11,7 +11,7 @@ Compilation
 ------------
 k-SLAM requires a modern version of gcc that can compile C++11 and a modern version of the boost libraries.
 ```
-unzip master.zip
+unzip k-SLAM-master.zip
 cd SLAM/build
 make
 cd ..
