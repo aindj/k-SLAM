@@ -247,13 +247,12 @@ inline void metagenomicAnalysis_Low_Mem(const std::string R1FileName,
                                 newIdentifiedTaxonomies.end());
     log("Processed\t" + std::to_string(numReads) + "\t reads");
   }
-  std::ofstream perReadout(outFileName + "PerRead");
+  std::ofstream perReadout(outFileName + "_PerRead");
   writePerReadResults(identifiedTaxonomies, perReadout);
   identifiedTaxonomies = combineTaxonomies(identifiedTaxonomies);
   if (outFileName.size()) {
     std::ofstream outFile(outFileName);
     writeResults(identifiedTaxonomies, outFile, taxDB, numReads);
-    writePerReadResults(identifiedTaxonomies, outFileName + "_per_read");
     writeAbbreviatedResultsFile(identifiedTaxonomies,
                                 outFileName + "_abbreviated", taxDB, numReads);
   } else
