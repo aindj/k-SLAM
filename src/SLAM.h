@@ -145,7 +145,7 @@ inline void metagenomicAnalysis(const std::string R1FileName,
   if (outFileName.size()) {
     std::ofstream outFile(outFileName);
     writeResults(identifiedTaxonomies, outFile, taxDB, numReads);
-    writePerReadResults(identifiedTaxonomies, outFileName + "_per_read");
+    //writePerReadResults(identifiedTaxonomies, outFileName + "_per_read");
     writeAbbreviatedResultsFile(identifiedTaxonomies,
                                 outFileName + "_abbreviated", taxDB, numReads);
   } else
