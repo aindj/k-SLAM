@@ -16,7 +16,7 @@ cd SLAM/build
 make
 cd ..
 mv build/SLAM ./
-export PATH=\$PATH:.
+export PATH=$PATH:.
 ```
 Database build
 ------------
@@ -101,7 +101,7 @@ CPU
 k-SLAM is designed to be run on a parallel platform, ideally with 8 or more cores. It will however run (albeit slower) on a system with fewer cores.
 Memory
 -------------------
-k-SLAM's \km list sort algorithm is fast but very memory intensive. For a dataset of 10 million paired reads aligning against the NCBI bacterial genomes, k-SLAM requires around 50GB RAM. For much larger datasets, k-SLAM can split them into smaller subsets (using option --num-reads-at-once see table above) which are analysed sequentially (still producing only one set of output files).
+k-SLAM's k-mer list sort algorithm is fast but very memory intensive. For a dataset of 10 million paired reads aligning against the NCBI bacterial genomes, k-SLAM requires around 50GB RAM. For much larger datasets, k-SLAM can split them into smaller subsets (using option --num-reads-at-once see table above) which are analysed sequentially (still producing only one set of output files).
 
 Output
 ====================
