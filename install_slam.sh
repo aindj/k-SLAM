@@ -73,7 +73,7 @@ cd bacteria
 if [ ! -e "baclibrarydownloaded" ]
 then
 	echo "Downloading RefSeq bacterial genomes"
-	wget ${NCBI_FTP}/genomes/Bacteria/$DB_FILE_NAME
+	wget ${NCBI_FTP}/genomes/archive/old_refseq/Bacteria/$DB_FILE_NAME
 	echo "Decompressing"
 	tar xf $DB_FILE_NAME
 #	rm $DB_FILE_NAME
