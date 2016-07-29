@@ -1,3 +1,4 @@
+Please contact david.ainsworth08@imperial.ac.uk with any questions or for updates regarding k-SLAM
 # k-SLAM
 Introduction
 ============
