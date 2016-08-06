@@ -1,5 +1,5 @@
 Please contact david.ainsworth08@imperial.ac.uk with any questions or for updates regarding k-SLAM <br />
-A web application (beta) is provided at http://www.sbg.bio.ic.ac.uk/~slam/index.html for preliminary analysis of small datasets.
+A web application (beta) is provided at http://www.sbg.bio.ic.ac.uk/~slam for preliminary analysis of small datasets.
 # k-SLAM
 Introduction
 ============
