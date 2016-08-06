@@ -169,7 +169,9 @@ inline void metagenomicAnalysis_Low_Mem(const std::string R1FileName,
   if (samFileName.size()) reportCigar = true;
   bool isPaired = (R2FileName.size());
   pairedData=isPaired;
-  TaxonomyDB taxDB(databaseFile + "/taxDB");
+  TaxonomyDB taxDB;
+  if(!justAlign)
+    taxDB= TaxonomyDB(databaseFile + "/taxDB");
   GenbankIndex genbankIndex =
       getIndexFromBoostSerial(databaseFile + "/database");
   std::vector<IdentifiedTaxonomy> identifiedTaxonomies;
@@ -246,6 +248,10 @@ inline void metagenomicAnalysis_Low_Mem(const std::string R1FileName,
                                 newIdentifiedTaxonomies.begin(),
                                 newIdentifiedTaxonomies.end());
     log("Processed\t" + std::to_string(numReads) + "\t reads");
+  }
+  if(justAlign){
+    log("Done");
+    return;
   }
   std::ofstream perReadout(outFileName + "_PerRead");
   writePerReadResults(identifiedTaxonomies, perReadout);
