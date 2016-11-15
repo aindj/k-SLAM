@@ -356,7 +356,7 @@ inline uint32_t getMaxAllowedInsertSize(
   log("Mean = " + std::to_string(mean) + ", standard deviation = " +
       std::to_string(stdDev));
   auto result = floor(mean + 6 * stdDev);
-  return isnan(result) ? UINT_MAX : result;
+  return std::isnan(result) ? UINT_MAX : result;
 }
 inline void screenPairedAlignmentsByScore(
     std::vector<ReadPairAndOverlaps> &readsAndAlignments, double fraction) {
