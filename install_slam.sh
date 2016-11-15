@@ -20,6 +20,10 @@
 set -e
 WORKING_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SLAM="$WORKING_DIR"/SLAM
+if [[ $# -eq 0 ]] ; then
+    echo 'Please provide directory name'
+    exit 0
+fi
 mkdir -p $1
 cd $1
 if (( $# >= 1 ))
