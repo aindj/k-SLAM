@@ -27,14 +27,14 @@ CPP_DEPS += \
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross G++ Compiler'
-	g++ -std=c++0x -D__GXX_EXPERIMENTAL_CXX0X__ -O3 -g3 -Wall -Wextra -c -fmessage-length=0 -fopenmp -std=c++0x -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	g++ -std=c++0x -D__GXX_EXPERIMENTAL_CXX0X__ -O3 -g3 -c -fmessage-length=0 -fopenmp -std=c++0x -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross GCC Compiler'
-	gcc -O3 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	gcc -O3 -g3 -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
