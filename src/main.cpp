@@ -62,7 +62,8 @@ int main(int argc, char *argv[]) {
       "write SAM output to this file")(
           "num-alignments", po::value<uint32_t>(&numSAMAlignments)->default_value(10),
           "Number of alignments to report in SAM file")("sam-xa",
-          "only output primary alignment lines, use XA field for secondary alignments")
+          "only output primary alignment lines, use XA field for secondary alignments")("version",
+              "print version number")
           ("just-align",
                     "only perform alignments, not metagenomics")
 //          ("report-cigar","report cigar string in output")
@@ -88,6 +89,10 @@ int main(int argc, char *argv[]) {
   po::notify(vm);
 //  if (vm.count("report-cigar")) reportCigar = true;
   if (vm.count("sam-xa")) SAMXA = true;
+  if (vm.count("version")){
+    std::cout <<"1.0"<<std::endl;
+    return 1;
+  }
   if (vm.count("just-align")) justAlign = true;
   if (vm.count("no-pseudo-assembly")) performPseudoAssembly = false;
   if (vm.count("help") || argc == 1) {
