@@ -1,6 +1,10 @@
 Please contact david.ainsworth08@imperial.ac.uk with any questions or for updates regarding k-SLAM <br />
 A web application (beta) is provided at http://www.sbg.bio.ic.ac.uk/~slam for preliminary analysis of small datasets.
 # k-SLAM
+
+NEWS:
+A new database installation script is provided (install_slam_new_db.sh) which allows download of the latest NCBI RefSeq genomes. This is necessary since the reorganisation of the NCBI ftp server. Note: this database contains many new genomes and will therefore increase execution time and memory usage.
+
 Introduction
 ============
 k-SLAM is a program for alignment based metagenomic analysis of large sets of high-throughput sequence data.<br />
