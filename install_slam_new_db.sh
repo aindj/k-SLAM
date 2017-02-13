@@ -20,19 +20,23 @@
 #set -x
 #set -e
 
+set -e
 WORKING_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-#SLAM="$WORKING_DIR"/SLAM
-export LD_LIBRARY_PATH="/scratch/da1108/tools2/lib64:/apps/boost/1.52.0/build/boost_1_52_0/lib"
-SLAM=/scratch/da1108/SLAM_SW/Debug/SLAM
+SLAM="$WORKING_DIR"/SLAM
+if [[ $# -eq 0 ]] ; then
+    echo 'Please provide directory name'
+    exit 0
+fi
 mkdir -p $1
 cd $1
 if (( $# >= 1 ))
 then
-        shift
+	shift
 else
-        echo "Please give install directory e.g. \"./install_slam.sh INSTALL_DIR bacteria viruses\""
-        exit 1
+	echo "Please give install directory e.g. \"./install_slam.sh INSTALL_DIR bacteria viruses\""
+	exit 1
 fi
+
 NCBI_FTP="ftp://ftp.ncbi.nih.gov/genomes/refseq"
 TAX_DB_FILE_NAME="taxdump.tar.gz"
 BACTERIA=false
