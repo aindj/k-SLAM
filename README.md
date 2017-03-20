@@ -83,7 +83,7 @@ mkdir custom_db && cd custom_db
 ```
 Build k-SLAM's taxonomy databases using the NCBI taxonomy nodes.dmp and names.dmp
 ```
-SLAM --parse-taxonomy names.dmp nodes.dmp --output-file taxonomy
+SLAM --parse-taxonomy names.dmp nodes.dmp --output-file taxDB
 ```
 Build k-SLAM's index from any number of Genbank files
 ```
