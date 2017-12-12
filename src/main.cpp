@@ -34,8 +34,8 @@ int main(int argc, char *argv[]) {
   uint32_t numReads, numReadsAtOnce;
   std::string outFileName, samFileName;
   allowed.add_options()("help", "produce help message")(
-      "db", po::value<std::string>(), "SLAM database file which reads "
-                                      "will be aligned against")(
+      "db", po::value<std::string>(), "SLAM database directory which "
+                                      "reads will be aligned against")(
       "min-alignment-score",
       po::value<uint32_t>(&scoreThreshold)->default_value(0),
       "alignment score cutoff")(
