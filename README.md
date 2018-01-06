@@ -1,4 +1,4 @@
-Please contact david.ainsworth08@imperial.ac.uk with any questions or for updates regarding k-SLAM <br />
+Please contact (NEW EMAIL) david.ainsworth89@gmail.com with any questions or for updates regarding k-SLAM <br />
 A web application (beta) is provided at http://www.sbg.bio.ic.ac.uk/~slam for preliminary analysis of small datasets. (Note: I am no longer at Imperial College and this site is not being maintained)
 # k-SLAM
 
