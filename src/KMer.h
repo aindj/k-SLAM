@@ -127,7 +127,7 @@ template <typename KMerInt, unsigned K>
 void splitIntoKMersAndAddToVector(
     const std::string &bases, std::vector<KMerAndData<KMerInt, K> > &kMerVector,
     const bool isFromGenbank, const uint32_t ID, const unsigned gap,
-    const unsigned pos);
+    const size_t pos);
 template <typename T, typename KMerInt, unsigned K>
 void getKMers_parallel(const std::vector<T> &entries,
                        std::vector<KMerAndData<KMerInt, K> > &kMers,
@@ -161,9 +161,9 @@ template <typename KMerInt, unsigned K>
 inline void splitIntoKMersAndAddToVector(
     const std::string &bases, std::vector<KMerAndData<KMerInt, K> > &kMerVector,
     const bool isFromGenbank, const uint32_t ID, const unsigned gap,
-    const unsigned pos) {
+    const size_t pos) {
   KMerInt kMer = 0, rckMer = 0;
-  unsigned offset = 0;
+  size_t offset = 0;
   if (bases.size() < K) return;
   // todo possibly a low complexity filter here
   for (unsigned i = 0; i < bases.size(); i++) {
